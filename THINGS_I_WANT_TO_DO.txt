@@ -1,0 +1,16 @@
+-REALLY REALLY COMPLICATED-
+
+Steganography (that may take any audio or image input)
+
+-DIFFICULT-
+Diffie Hellman protocol
+Primality test
+RSA keys
+
+-BASIC-
+Modular exponentiation
+Chinese remainder theorem
+Euclidean algorithm
+Extended euclidean algorithm
+Find factors
+Find divisors

@@ -1,21 +1,19 @@
 #include <factors.h>
 #include <debug.h>
+#include <numbers.h>
 
-std::vector<int> factors(int number){ // find the factors of a number
-	std::vector<int> vector_factors;
-	if (number > 1){
-		for (int possible_divisor = 2; possible_divisor <= number ; possible_divisor++){
-			while (number % possible_divisor == 0){
-				number = number / possible_divisor;
-				vector_factors.push_back(possible_divisor);
-			}
-			if (number == 1){
-				break;
-			}
+int main(int argc, char **argv){
+	if (argc == 2){
+		std::string aString = argv[1];
+		if (isInt(aString)){
+			int a = toInt(aString);
+			std::vector<int> vector_factors = factors(a);
+			std::cout << "Factors of " << a << ":" << std::endl;
+			leer_vector(vector_factors);
 		}
 	}
-	else if (number == 1){
-		vector_factors.push_back(1);
+	else{
+		std::cout << "It need one integer number to work" << std::endl;
 	}
-	return vector_factors;
+	return 0;
 }

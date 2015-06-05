@@ -1,9 +1,0 @@
--Agregar el comando -I. (esto indica que es el directorio actual) para incluir los headers
--Si un programa necesita la implementacion de otro programa, es necesario compilar AMBOS
---Tomar en cuenta esto en los haders
-#ifndfef __NOMBRE_H_INCLUDED__
-#define __NOMBRE_H_INCLUDED__
-
-....
-
-#endif
