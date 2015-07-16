@@ -3,9 +3,9 @@
 
 #include <vector>
 
-void find_factors(std::vector<int> &factors, int number);
+void get_factors(std::vector<int> &factors, int number);
 
-void find_factors(std::vector<int> &factors, int number){ // find the factors of a number
+void get_factors(std::vector<int> &factors, int number){ // find the factors of a number
 	if (number > 1){
 		for (int possible_divisor = 2; possible_divisor <= number ; possible_divisor++){
 			while (number % possible_divisor == 0){

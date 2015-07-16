@@ -4,7 +4,6 @@
 #include <string>
 #include <stdexcept>
 #include <limits>
-
 bool isInt(std::string _string);
 bool isFloat(std::string _string);
 bool isNumber(std::string _string);

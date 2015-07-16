@@ -16,6 +16,7 @@ void imprimirNumeros(int *arreglo, int LIMITE){
 	}
 	else{
 		for (int i = 0; i < LIMITE; i++){
+			std::cout << "\t" << i << std::endl;
 			arreglo[i] = i * 10;
 			std::cout << "Arreglo(" << i << ") en " << &arreglo[i] << " es igual a: " << arreglo[i] << std::endl;
 		}
@@ -132,8 +133,8 @@ int main(int argc, char *argv[]){
 	std::cout << VERDADERO << " - " << FALSO << std::endl;
 	
 	if (argc == 2){
-		//abrirArchivo(argv[1]); // es un arreglo, lo trata como tal
-		abrirArchivoBinario(argv[1]);
+		abrirArchivo(argv[1]); // es un arreglo, lo trata como tal
+		//abrirArchivoBinario(argv[1]);
 	}
 	return 0;
 }

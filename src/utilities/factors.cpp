@@ -7,9 +7,10 @@ int main(int argc, char **argv){
 		std::string aString = argv[1];
 		if (isInt(aString)){
 			int a = toInt(aString);
-			std::vector<int> vector_factors = factors(a);
+			std::vector<int> vector_factors;
+				get_factors(vector_factors, a);
 			std::cout << "Factors of " << a << ":" << std::endl;
-			leer_vector(vector_factors);
+			print_vector(vector_factors);
 		}
 	}
 	else{

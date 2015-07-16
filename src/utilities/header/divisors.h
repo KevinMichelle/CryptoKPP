@@ -7,12 +7,12 @@
 #include <factors.h>
 #include <statistics.h>
 
-void find_divisors(std::vector<int> &divisors, std::vector<int> &factors); //it does the work
-void find_divisors(std::vector<int> &divisors, int number); //interface, if the programmer only want 
+void get_divisors(std::vector<int> &divisors, std::vector<int> &factors); //it does the work
+void get_divisors(std::vector<int> &divisors, int number); //interface, if the programmer only want 
 
-void find_divisors(std::vector<int> &divisors, std::vector<int> &factors){
+void get_divisors(std::vector<int> &divisors, std::vector<int> &factors){
 	std::map<int, int> frecuency_numbers;
-	frecuency(frecuency_numbers, factors);
+	get_frecuency(frecuency_numbers, factors);
 	int last_position_vector;
 	int temporal_factor;
 	int factor = 0;
@@ -20,7 +20,7 @@ void find_divisors(std::vector<int> &divisors, std::vector<int> &factors){
 	int size_vector_factors = factors.size();
 	divisors.push_back(1);
 	if (size_vector_factors > 1){
-		for(std::map<int, int>::iterator iter = frecuency_numbers.begin(); iter != frecuency_numbers.end(); ++iter){
+		for(auto iter = frecuency_numbers.begin(); iter != frecuency_numbers.end(); ++iter){
 			last_position_vector = divisors.size() - 1;
 			factor = iter->first;
 			frec = iter->second;
@@ -41,10 +41,10 @@ void find_divisors(std::vector<int> &divisors, std::vector<int> &factors){
 	std::sort (divisors.begin(), divisors.end());
 }
 
-void find_divisors(std::vector<int> &divisors, int number){
+void get_divisors(std::vector<int> &divisors, int number){
 	std::vector<int> factors;
-	find_factors(factors, number);
-	find_divisors(divisors, factors);
+	get_factors(factors, number);
+	get_divisors(divisors, factors);
 }
 
 #endif
